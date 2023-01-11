@@ -7,7 +7,7 @@ class Car{
     }
 
     carStats(){
-        return `This car has ${this.doors} doors, a ${tihs.engine} engine, and is ${this.color}.`;
+        return `This car has ${this.doors} doors, a ${this.engine} engine, and is ${this.color}.`;
     }
 }
 
