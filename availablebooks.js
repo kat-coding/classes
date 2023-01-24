@@ -7,12 +7,14 @@ class Book{
         this.isbn = isbn;
         this.numCopies = numCopies;
     }
-
+    get availability(){
+        return this.getAvailability();
+    }
     getAvailability(){
-        if(getCopies() == 0){
+        if(this.numCopies() == 0){
             return "out of stock";
         }
-        if(getCopies() < 10){
+        if(this.numCopies() < 10){
             return "low stock";
         }
         else{
@@ -45,5 +47,5 @@ const myBook = new Book("It", "Stephen King", 123456789, 5);
 console.log(myBook.getAvailability());
 myBook.restock(15);
 console.log(myBook.getAvailability());
-myBook.sell(11);
+myBook.sell(20);
 console.log(myBook.getAvailability());
