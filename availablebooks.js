@@ -1,6 +1,20 @@
 'use strict';
 
+/**
+ * @author Katherine Watkins
+ * SDEV 328
+ * JS 3
+ * available books code challenge
+ */
 class Book{
+    /**
+     *Book class stores information about books in bookstore
+     *
+     * @param title title of book
+     * @param author author of book
+     * @param isbn isbn number for book
+     * @param numCopies copies in stock of this book
+     */
     constructor(title, author, isbn, numCopies) {
         this.title = title;
         this.author = author;
@@ -42,7 +56,7 @@ class Book{
         return this.numCopies;
     }
 }
-
+//Test the book class below
 const myBook = new Book("It", "Stephen King", 123456789, 5);
 console.log(myBook.getAvailability());
 myBook.restock(15);
