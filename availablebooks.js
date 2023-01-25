@@ -25,10 +25,10 @@ class Book{
         return this.getAvailability();
     }
     getAvailability(){
-        if(this.numCopies() == 0){
+        if(this.getNumCopies() == 0){
             return "out of stock";
         }
-        if(this.numCopies() < 10){
+        if(this.getNumCopies() < 10){
             return "low stock";
         }
         else{
