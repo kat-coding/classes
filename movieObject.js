@@ -58,7 +58,14 @@ class Movie{
     }
 
     getOverview(){
-        console.log(`${this.getTitle()}, a ${this.getGenre()} film directed by ${this.getDirector()} was released in ${this.getReleaseYear()}. It received
- * a rating of ${this.getRating()}.`);
+        console.log(`${this.getTitle()}, a ${this.getGenre()} film, directed by ${this.getDirector()} was released in ${this.getReleaseYear()}. It received
+ a rating of ${this.getRating()}.`);
     }
 }
+
+//tests below
+let Titanic = new Movie("Titanic", "Historical Drama", "James Cameron", 1997, 4.8);
+Titanic.getOverview();
+let LittleMermaid = new Movie("The Little Mermaid", "Children's Film", "John Musker & Ron Clements", 1989, 4.4);
+LittleMermaid.getOverview();
+console.log(LittleMermaid);
