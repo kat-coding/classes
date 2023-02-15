@@ -56,10 +56,31 @@ class Book{
         return this.numCopies;
     }
 }
+//JS 6 Technical Books
+class TechnicalBook extends Book{
+
+    constructor(title, author, isbn, numCopies, edition) {
+        super(title, author, isbn, numCopies);
+        this._edition = edition;
+    }
+
+    getEdition() {
+        return `The current version of this book is, ${this._edition}.`;
+    }
+}
 //Test the book class below
-const myBook = new Book("It", "Stephen King", 123456789, 5);
-console.log(myBook.getAvailability());
-myBook.restock(15);
-console.log(myBook.getAvailability());
-myBook.sell(20);
-console.log(myBook.getAvailability());
+// const myBook = new Book("It", "Stephen King", 123456789, 5);
+// console.log(myBook.getAvailability());
+// myBook.restock(15);
+// console.log(myBook.getAvailability());
+// myBook.sell(20);
+// console.log(myBook.getAvailability());
+
+//Test TechnicalBook
+const myTechBook = new TechnicalBook("Building Java Programs", "Stuart Reges and Marty Stepp", 9780135741944, 5, 5);
+console.log(myTechBook.getAvailability());
+myTechBook.restock(15);
+console.log(myTechBook.getAvailability());
+myTechBook.sell(20);
+console.log(myTechBook.getAvailability());
+console.log(myTechBook.getEdition());
