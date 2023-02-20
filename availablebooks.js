@@ -57,6 +57,12 @@ class Book{
     }
 }
 //JS 6 Technical Books
+/**
+ * @author Katherine Watkins
+ * SDEV 328
+ * JS 6
+ * technical books code challenge
+ */
 class TechnicalBook extends Book{
 
     constructor(title, author, isbn, numCopies, edition) {
